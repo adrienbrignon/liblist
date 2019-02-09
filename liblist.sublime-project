@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"SublimeLinter.linters.gcc.include_dirs":
+		[
+			"${project_path}/include",
+			"${project_path}/lib/my/include"
+		]
+	}
+}

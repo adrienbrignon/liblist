@@ -1,0 +1,27 @@
+stages:
+  - build
+  - tests
+
+build:
+  stage: build
+  image: gcc
+  artifacts:
+    paths:
+      - lib
+      - include
+  script: make
+
+norm:
+  stage: tests
+  image: ethaligan/epitech-c
+  allow_failure: yes
+  script:
+    - normez
+
+test:
+  stage: tests
+  image: ethaligan/epitech-c
+  script:
+    - make test
+    - gcovr -s
+  coverage: '/lines: \d+\.\d+/'
