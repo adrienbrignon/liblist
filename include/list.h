@@ -24,6 +24,8 @@ typedef struct list
 
 typedef int (list_test_function_t)(node_t *node);
 
+typedef void *(list_map_function_t)(void *data);
+
 int list_push(list_t *list, void *node);
 int list_unshift(list_t *list, void *node);
 int list_some(list_t *list, list_test_function_t *fn);
@@ -34,6 +36,7 @@ void *list_shift(list_t *list);
 
 list_t *new_list(void);
 list_t *list_concat(list_t *list, ...);
+list_t *list_map(list_t *list, list_map_function_t *fn);
 list_t *list_filter(list_t *list, list_test_function_t *fn);
 
 node_t *new_node(void *data);
