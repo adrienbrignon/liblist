@@ -2,6 +2,9 @@
 /lib/liblist.a
 /unit-tests
 
+# Coverage
+*.gc*
+
 # Sublime Text
 *.sublime-workspace
 
