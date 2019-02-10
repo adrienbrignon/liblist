@@ -12,16 +12,16 @@
 void *list_pop(list_t *list)
 {
     void *data = NULL;
+    node_t *node = list->last;
 
     if (list->length == 0)
         return data;
 
-    data = list->last->data;
-
-    free(list->last);
-
-    list->last = list->last->previous;
+    data = node->data;
+    list->last = node->previous;
     list->length--;
+
+    free(node);
 
     if (list->length > 0) {
         list->last->next = NULL;

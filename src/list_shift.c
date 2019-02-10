@@ -12,16 +12,16 @@
 void *list_shift(list_t *list)
 {
     void *data = NULL;
+    node_t *node = list->first;
 
     if (list->length == 0)
         return data;
 
-    data = list->first->data;
-
-    free(list->first);
-
-    list->first = list->first->next;
+    data = node->data;
+    list->first = node->next;
     list->length--;
+
+    free(node);
 
     if (list->length > 0) {
         list->first->previous = NULL;
