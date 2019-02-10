@@ -29,7 +29,7 @@ void *list_pop(list_t *list);
 void *list_shift(list_t *list);
 
 list_t *new_list(void);
-list_t *list_concat(const list_t *list, ...);
+list_t *list_concat(list_t *list, ...);
 
 node_t *new_node(void *data);
 

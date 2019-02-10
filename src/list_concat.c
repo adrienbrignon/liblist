@@ -10,27 +10,27 @@
 
 #include "list.h"
 
-static inline void copy_nodes(const list_t *to, const list_t *from)
+static inline void copy_nodes(list_t *to, list_t *from)
 {
-    list_t *list = (list_t *) from;
+    node_t *node = from->last;
 
-    while (list->last != NULL) {
-        list_push((list_t *) to, from->last->data);
+    while (node != NULL) {
+        list_push(to, node->data);
 
-        list->last = list->last->previous;
+        node = node->previous;
     }
 }
 
-list_t *list_concat(const list_t *list, ...)
+list_t *list_concat(list_t *list, ...)
 {
     va_list arg;
+    list_t *tmp = NULL;
     list_t *new = new_list();
-    list_t *tmp = (list_t *) list;
 
-    if (list == NULL)
-        return (list_t *) list;
+    if (new == NULL || list == NULL)
+        return list;
 
-    copy_nodes(new, tmp);
+    copy_nodes(new, list);
     va_start(arg, list);
 
     while ((tmp = va_arg(arg, list_t *)) != NULL)
