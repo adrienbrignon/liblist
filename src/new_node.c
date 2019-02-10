@@ -14,7 +14,7 @@ node_t *new_node(void *data)
     node_t *node = malloc(sizeof *node);
 
     if (node == NULL)
-        return NULL;
+        return node;
 
     node->data = data;
     node->next = NULL;

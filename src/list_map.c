@@ -9,7 +9,7 @@
 
 #include "list.h"
 
-list_t *list_map(list_t *list, list_map_function_t *fn)
+list_t *list_map(list_t *list, list_map_function_t *callback)
 {
     list_t *new = new_list();
     node_t *node = list->first;
@@ -17,7 +17,7 @@ list_t *list_map(list_t *list, list_map_function_t *fn)
     if (new == NULL)
         return new;
     while (node != NULL) {
-        list_push(new, fn(node->data));
+        list_push(new, callback(node->data));
 
         node = node->next;
     }
