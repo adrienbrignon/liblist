@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test shift operation.
+** Test the list_shift function.
 */
 
 #include <criterion/criterion.h>

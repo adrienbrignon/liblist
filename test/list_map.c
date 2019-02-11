@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test every function.
+** Test the list_map function.
 */
 
 #include <string.h>

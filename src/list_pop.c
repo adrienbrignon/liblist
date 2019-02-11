@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Remove a node from the end of list.
+** Remove a node from the list end.
 */
 
 #include <stdlib.h>

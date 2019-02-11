@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test filter function.
+** Test the list_filter function.
 */
 
 #include <criterion/criterion.h>

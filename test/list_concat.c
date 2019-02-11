@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test list concatenation.
+** Test the list_concat function.
 */
 
 #include <criterion/criterion.h>

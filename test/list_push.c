@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test push operation.
+** Test the list_push function.
 */
 
 #include <criterion/criterion.h>

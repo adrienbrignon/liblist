@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test pop operation.
+** Test the list_pop function.
 */
 
 #include <criterion/criterion.h>

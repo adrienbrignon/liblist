@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Merge two or more lists, into a new one.
+** Merge two or more lists into a new one.
 */
 
 #include <stdarg.h>

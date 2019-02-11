@@ -2,14 +2,14 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Create a new list with the results of calling a function for every list node.
+** Create a new list with the given callback on old list values.
 */
 
 #include <stddef.h>
 
 #include "list.h"
 
-list_t *list_map(list_t *list, list_map_function_t *callback)
+list_t *list_map(list_t *list, list_map_callback_t *callback)
 {
     list_t *new = new_list();
     node_t *node = list->first;

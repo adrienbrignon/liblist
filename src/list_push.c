@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Push a node to the list end.
+** Insert a node at the list end.
 */
 
 #include <stdlib.h>

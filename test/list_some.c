@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test some function.
+** Test the list_some function.
 */
 
 #include <criterion/criterion.h>

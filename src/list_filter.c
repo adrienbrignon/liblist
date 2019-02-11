@@ -9,7 +9,7 @@
 
 #include "list.h"
 
-list_t *list_filter(list_t *list, list_test_function_t *test)
+list_t *list_filter(list_t *list, list_filter_callback_t *callback)
 {
     list_t *new = new_list();
     node_t *node = list->first;
@@ -17,7 +17,7 @@ list_t *list_filter(list_t *list, list_test_function_t *test)
     if (new == NULL)
         return new;
     while (node != NULL) {
-        if (test(node))
+        if (callback(node))
             list_push(new, node->data);
 
         node = node->next;

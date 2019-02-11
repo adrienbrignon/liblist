@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2018
 ** liblist
 ** File description:
-** Test unshift operation.
+** Test the list_unshift function.
 */
 
 #include <criterion/criterion.h>
