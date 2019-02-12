@@ -13,14 +13,14 @@ build:
 
 norm:
   stage: tests
-  image: ethaligan/epitech-c
+  image: adrienbrignon/epitech-c
   allow_failure: yes
   script:
     - normez
 
 test:
   stage: tests
-  image: ethaligan/epitech-c
+  image: adrienbrignon/epitech-c
   script:
     - make test
     - gcovr -s
