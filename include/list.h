@@ -8,15 +8,13 @@
 #ifndef LIST_H_
 #define LIST_H_
 
-typedef struct node
-{
+typedef struct node {
     void *data;
     struct node *next;
     struct node *previous;
 } node_t;
 
-typedef struct list
-{
+typedef struct list {
     int length;
     node_t *first;
     node_t *last;
@@ -24,6 +22,7 @@ typedef struct list
 
 typedef void (list_reduce_callback_t)(int *accumulator, node_t *node);
 
+typedef int (list_find_callback_t)(node_t *node);
 typedef int (list_some_callback_t)(node_t *node);
 typedef int (list_every_callback_t)(node_t *node);
 typedef int (list_filter_callback_t)(node_t *node);
@@ -45,5 +44,6 @@ list_t *list_map(list_t *list, list_map_callback_t *fn);
 list_t *list_filter(list_t *list, list_filter_callback_t *fn);
 
 node_t *new_node(void *data);
+node_t *list_find(list_t *list, list_find_callback_t *callback);
 
 #endif
