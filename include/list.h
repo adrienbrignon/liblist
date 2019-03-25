@@ -29,8 +29,9 @@ typedef int (list_filter_callback_t)(node_t *node);
 
 typedef void *(list_map_callback_t)(void *data);
 
-int list_push(list_t *list, void *node);
-int list_unshift(list_t *list, void *node);
+int list_push(list_t *list, void *data);
+int list_unshift(list_t *list, void *data);
+int list_contains(list_t *list, void *data);
 int list_some(list_t *list, list_some_callback_t *fn);
 int list_every(list_t *list, list_every_callback_t *fn);
 int list_reduce(list_t *list, list_reduce_callback_t *callback);

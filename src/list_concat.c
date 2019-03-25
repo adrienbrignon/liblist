@@ -12,12 +12,12 @@
 
 static inline void copy_nodes(list_t *to, list_t *from)
 {
-    node_t *node = from->last;
+    node_t *node = from->first;
 
     while (node != NULL) {
         list_push(to, node->data);
 
-        node = node->previous;
+        node = node->next;
     }
 }
 
