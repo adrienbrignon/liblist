@@ -16,7 +16,7 @@ norm:
   image: adrienbrignon/epitech-c
   allow_failure: yes
   script:
-    - normez
+    - normez -u
 
 test:
   stage: tests
