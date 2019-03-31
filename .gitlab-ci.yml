@@ -7,8 +7,8 @@ build:
   image: gcc
   artifacts:
     paths:
-      - lib
       - include
+      - liblist.a
   script: make
 
 norm:

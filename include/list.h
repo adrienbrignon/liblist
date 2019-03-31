@@ -29,6 +29,8 @@ typedef int (list_filter_callback_t)(node_t *node);
 
 typedef void *(list_map_callback_t)(void *data);
 
+void list_destroy(list_t *list);
+
 int list_push(list_t *list, void *data);
 int list_unshift(list_t *list, void *data);
 int list_contains(list_t *list, void *data);

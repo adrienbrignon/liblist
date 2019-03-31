@@ -7,10 +7,10 @@
 
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -pipe -O2 -Iinclude
-LDFLAGS = -Llib
+LDFLAGS = -L.
 LDLIBS = -llist -lcriterion
 
-NAME = lib/liblist.a
+NAME = liblist.a
 
 SRCS = $(wildcard src/*.c) $(wildcard src/**/*.c)
 OBJS = $(SRCS:.c=.o)
