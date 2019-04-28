@@ -10,7 +10,7 @@
 
 #include "list.h"
 
-static inline void copy_nodes(list_t *to, list_t *from)
+static void copy_nodes(list_t *to, list_t *from)
 {
     node_t *node = from->first;
 
