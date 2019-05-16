@@ -12,7 +12,7 @@
 Test(list_contains, should_contain)
 {
     char *bonjour = "bonjour";
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list_push(list, "hey"), 1);

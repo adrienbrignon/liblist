@@ -11,7 +11,7 @@
 
 Test(list_pop, test_on_empty_list)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_null(list_pop(list));
@@ -20,7 +20,7 @@ Test(list_pop, test_on_empty_list)
 
 Test(list_pop, test_on_list_with_two_nodes)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     list_unshift(list, "a");

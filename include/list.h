@@ -8,6 +8,8 @@
 #ifndef LIST_H_
 #define LIST_H_
 
+#include <stddef.h>
+
 typedef struct node {
     void *data;
     struct node *next;
@@ -15,7 +17,7 @@ typedef struct node {
 } node_t;
 
 typedef struct list {
-    int length;
+    size_t length;
     node_t *first;
     node_t *last;
 } list_t;
@@ -41,12 +43,12 @@ int list_reduce(list_t *list, list_reduce_callback_t *callback);
 void *list_pop(list_t *list);
 void *list_shift(list_t *list);
 
-list_t *new_list(void);
+list_t *list_new(void);
 list_t *list_concat(list_t *list, ...);
 list_t *list_map(list_t *list, list_map_callback_t *fn);
 list_t *list_filter(list_t *list, list_filter_callback_t *fn);
 
-node_t *new_node(void *data);
+node_t *list_node(void *data);
 node_t *list_find(list_t *list, list_find_callback_t *callback);
 
 #endif

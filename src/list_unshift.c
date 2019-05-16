@@ -11,9 +11,9 @@
 
 int list_unshift(list_t *list, void *data)
 {
-    node_t *node = new_node(data);
+    node_t *node = NULL;
 
-    if (node == NULL)
+    if ((node = list_node(data)) == NULL)
         return -1;
 
     node->next = list->first;

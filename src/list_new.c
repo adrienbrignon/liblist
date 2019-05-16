@@ -9,12 +9,12 @@
 
 #include "list.h"
 
-list_t *new_list(void)
+list_t *list_new(void)
 {
-    list_t *list = malloc(sizeof *list);
+    list_t *list = NULL;
 
-    if (list == NULL)
-        return list;
+    if ((list = malloc(sizeof *list)) == NULL)
+        return NULL;
 
     list->length = 0;
     list->first = NULL;

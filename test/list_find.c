@@ -16,7 +16,7 @@ static int filter(node_t *node)
 
 Test(list_find, test_on_empty_list)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list->length, 0);

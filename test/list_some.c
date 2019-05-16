@@ -16,7 +16,7 @@ static int not_null(node_t *node)
 
 Test(list_some, test_on_empty_list)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list->length, 0);
@@ -25,7 +25,7 @@ Test(list_some, test_on_empty_list)
 
 Test(list_some, should_return_true)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     list_push(list, NULL);
@@ -37,7 +37,7 @@ Test(list_some, should_return_true)
 
 Test(list_some, should_return_false)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     list_push(list, NULL);

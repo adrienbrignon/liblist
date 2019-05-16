@@ -11,7 +11,7 @@
 
 list_t *list_map(list_t *list, list_map_callback_t *callback)
 {
-    list_t *new = new_list();
+    list_t *new = list_new();
     node_t *node = list->first;
 
     if (new == NULL)

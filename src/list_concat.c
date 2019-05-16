@@ -25,7 +25,7 @@ list_t *list_concat(list_t *list, ...)
 {
     va_list arg;
     list_t *tmp = NULL;
-    list_t *new = new_list();
+    list_t *new = list_new();
 
     if (new == NULL || list == NULL)
         return list;

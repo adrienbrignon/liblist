@@ -9,12 +9,12 @@
 
 #include "list.h"
 
-node_t *new_node(void *data)
+node_t *list_node(void *data)
 {
-    node_t *node = malloc(sizeof *node);
+    node_t *node = NULL;
 
-    if (node == NULL)
-        return node;
+    if ((node = malloc(sizeof *node)) == NULL)
+        return NULL;
 
     node->data = data;
     node->next = NULL;

@@ -33,7 +33,7 @@ static void *reverse(void *str)
 Test(list_map, test_on_empty_list)
 {
     list_t *new = NULL;
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list->length, 0);
@@ -48,7 +48,7 @@ Test(list_map, test_on_empty_list)
 Test(list_map, test_on_string_nodes)
 {
     list_t *new = NULL;
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     list_push(list, strdup("hello"));

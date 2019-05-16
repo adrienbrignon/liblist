@@ -11,8 +11,8 @@
 
 Test(list_concat, test_with_empty_lists)
 {
-    list_t *a = new_list();
-    list_t *b = new_list();
+    list_t *a = list_new();
+    list_t *b = list_new();
     list_t *c = NULL;
 
     cr_assert(a != NULL && b != NULL);
@@ -27,8 +27,8 @@ Test(list_concat, test_with_empty_lists)
 
 Test(list_concat, test_with_two_lists)
 {
-    list_t *a = new_list();
-    list_t *b = new_list();
+    list_t *a = list_new();
+    list_t *b = list_new();
     list_t *c = NULL;
 
     cr_assert(a != NULL && b != NULL);
@@ -47,9 +47,9 @@ Test(list_concat, test_with_two_lists)
 
 Test(list_concat, test_with_three_lists)
 {
-    list_t *a = new_list();
-    list_t *b = new_list();
-    list_t *c = new_list();
+    list_t *a = list_new();
+    list_t *b = list_new();
+    list_t *c = list_new();
     list_t *d = NULL;
 
     cr_assert(a != NULL && b != NULL && c != NULL);

@@ -11,7 +11,7 @@
 
 Test(list_unshift, test_with_one_node)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list_unshift(list, "cat"), 1);
@@ -24,7 +24,7 @@ Test(list_unshift, test_with_one_node)
 
 Test(list_unshift, test_with_two_nodes)
 {
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list_unshift(list, "cat"), 1);

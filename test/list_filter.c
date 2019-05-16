@@ -17,7 +17,7 @@ static int not_null(node_t *node)
 Test(list_filter, test_on_empty_list)
 {
     list_t *new = NULL;
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     cr_assert_eq(list->length, 0);
@@ -31,7 +31,7 @@ Test(list_filter, test_on_empty_list)
 Test(list_filter, test_on_list_with_three_nodes)
 {
     list_t *new = NULL;
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     list_push(list, "hello");
@@ -53,7 +53,7 @@ Test(list_filter, test_on_list_with_three_nodes)
 Test(list_filter, test_on_list_with_no_matching_nodes)
 {
     list_t *new = NULL;
-    list_t *list = new_list();
+    list_t *list = list_new();
 
     cr_assert_not_null(list);
     list_push(list, NULL);
